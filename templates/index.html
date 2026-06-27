@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrammAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+
+            <h1 class="logo">
+                Gramm<span>AI</span>
+            </h1>
+
+            <h2>Speak Better English</h2>
+
+            <p>
+                Speak or type a sentence and get instant grammar feedback.
+            </p>
+        </header>
+
+        <section class="input-section">
+
+            <div class="input-box">
+
+                <textarea
+                    id="speechText"
+                    placeholder="Type or speak something..."
+                ></textarea>
+
+            </div>
+
+            <div class="mic-section">
+
+                <button id="micBtn">
+
+                    <i class="fas fa-microphone"></i>
+
+                </button>
+
+                <p>Start Speaking</p>
+
+            </div>
+
+        </section>
+
+        <section class="result-section">
+            <div class="card">
+                <div class="card-header">
+                    <h3>
+                        <i class="fas fa-check-circle"></i>
+                        Corrected Sentence
+                    </h3>
+                    <button id="speakBtn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <p id="correctSentence">
+                        Your corrected sentence will appear here.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>
+                        <i class="fas fa-list"></i>
+                        Grammar Feedback
+                    </h3>
+                </div>
+
+                <div class="card-body">
+                    <div id="feedback">
+                        Grammar suggestions will appear here.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bottom-btn">
+            <button id="retryBtn">
+                Try Another Sentence
+            </button>
+        </div>
+
+        <footer>
+            Keep Practicing. Keep Improving ❤️
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
